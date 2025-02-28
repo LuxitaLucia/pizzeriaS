@@ -11,7 +11,7 @@
     </script>
   </head>
 
-  <body class="bg-gray-100">
+  <body>
     <!-- Navbar -->
     <nav class="bg-red-800 p-4 shadow-2xl">
       <div class="container mx-auto flex justify-between items-center">
@@ -58,6 +58,110 @@
         </div>
       </div>
     </nav>
+
+    <div class="bg-gray-900 flex">
+      <div class="w-full max-w-sm">
+        <div
+          id="menu-card"
+          class="bg-red-600 p-3 text-white text-2xl tracking-widest flex justify-between items-center cursor-pointer"
+        >
+          PIZZE SPECIALI
+          <span id="toggle-icon">▼</span>
+        </div>
+        <div id="menu-content" class="hidden p-4 bg-gray-800 text-white">
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">CARBONARA</div>
+            <div class="text-sm">
+              mozzarella, coppata, uovo, scaglie di grana, pepe nero
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €7,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">PICCANTINA</div>
+            <div class="text-sm">
+              pomodoro, acciughe, olive, capperi, cipolla, peperoncino
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €7,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">GUSTOSA</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, peperoni, salsiccia, cipolla, scaglie di
+              grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">ORTOLANA</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, peperoni , funghi, carciofi, olive, cipolla,
+              scaglie di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">
+              BRACCIO DI FERRO
+            </div>
+            <div class="text-sm">
+              mozzarella, spinaci , bresaola, fonduta di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">BARONESSA</div>
+            <div class="text-sm">
+              bufala, salsiccia, nduja, patate a fette, capperi, grana crocante
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">RUSTICANA</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, acciughe, capperi, olive, cipolletta,
+              asparagi, coppata
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">TREZZA</div>
+            <div class="text-sm">
+              pesto di pistacchio, bufala, zucchine grigliate, porcini, scaglie
+              di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Secțiune meniu -->
     <section class="container mx-auto py-10">
@@ -134,6 +238,21 @@
         .getElementById("menu-btn")
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+    <script>
+      document
+        .getElementById("menu-card")
+        .addEventListener("click", function () {
+          const content = document.getElementById("menu-content");
+          const icon = document.getElementById("toggle-icon");
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            icon.textContent = "▲";
+          } else {
+            content.classList.add("hidden");
+            icon.textContent = "▼";
+          }
         });
     </script>
   </body>
