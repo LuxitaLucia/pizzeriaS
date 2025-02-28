@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+    <title>Pizzeria Stella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import tailwindConfig from "/tailwind.config.js";
+      tailwind.config = tailwindConfig;
+    </script>
+  </head>
+  <body class="bg-black">
+    <div class="border-double border-4">
+      <div class="flex justify-between flex-wrap p-8 gap-4 md:leading-8">
+        <div class="text-3xl text-white md:leading-relaxed">
+          <div class="tracking-widest text-orange-100">PIZZERIA</div>
+          <div class="text-yellow-300 italic tracking-widest">Stella</div>
+        </div>
+
+        <div class="text-white">
+          <div class="text-yellow-300 tracking-widest">
+            CONSEGNA A DOMICILIO :
+          </div>
+          <ul class="flex gap-4 text-yellow-300 tracking-widest">
+            <li>
+              <a href="tel:3760540553"></a>
+              376 0540553
+            </li>
+            <li><a href="tel:0958832260"></a>095 8832260</li>
+          </ul>
+          <div class="text-orange-100 tracking-widest">
+            VIALLE EUROPA - BIANCAVILLA CT
+          </div>
+          <div class="text-orange-100 tracking-widest">
+            CHIUSURA SETTIMANALE : MARTEDI
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 p-2 text-yellow-300 text-center">
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-center justify-center"
+        >
+          PIZZE SPECIALI
+        </div>
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-center justify-center"
+        >
+          NORMALE
+        </div>
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-center justify-center"
+        >
+          MAXI
+        </div>
+        <div class="p-4">
+          CARBONARA
+          <div class="text-white">
+            mozzarella, coppata, uovo, scaglie di grana, pepe nero
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 7, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          PICCANTINA
+          <div class="text-white">
+            pomodoro, acciughe, olive, capperi, cipolla, peperoncino
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 7, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          GUSTOSA
+          <div class="text-white">
+            pomodoro, mozzarella, peperoni, salsiccia, cipolla, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          ORTOLANA
+          <div class="text-white">
+            pomodoro, mozzarella, peperoni , funghi, carciofi, olive, cipolla,
+            scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          BRACCIO DI FERRO
+          <div class="text-white">
+            mozzarella, spinaci , bresaola, fonduta di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          BARONESSA
+          <div class="text-white">
+            bufala, salsiccia, nduja, patate a fette, capperi, grana crocante
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          RUSTICANA
+          <div class="text-white">
+            pomodoro, mozzarella, acciughe, capperi, olive, cipolletta,
+            asparagi, coppata
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          TREZZA
+          <div class="text-white">
+            pesto di pistacchio, bufala, zucchine grigliate, porcini, scaglie di
+            grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          BUFALA
+          <div class="text-white">
+            pomodorino, rucola, coppata, burrata, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          PISTACCHIOSA (con bordo ripieno)
+          <div class="text-white">
+            crema di pistacchio, bufala, prosciutto cotto, scaglie di grana,
+            burrata, granella di pistacchio
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 15, 50</div>
+        <div></div>
+        <div class="p-4">
+          CONTADINA
+          <div class="text-white">
+            mozzarella, pomodoro, salame dolce, peperoni, carciofi, funghi
+            olive, cipolletta
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          SUFFLE'
+          <div class="text-white">
+            pomodoro, mozzarella, prosciutto cotto, funghi, scaglie
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 6, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 18, 00</div>
+        <div class="p-4">
+          UNO
+          <div class="text-white">
+            mozzarella, friarielli, nduja, cipolletta, olive, grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          DUE
+          <div class="text-white">
+            mozzarella, salame dolce, peperoni, olive, tuma
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          TRE
+          <div class="text-white">
+            mozzarella, pomodorino, peperoni, salsiccia piccante, provola
+            affumicata
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          QUATTRO
+          <div class="text-white">
+            pomodoro, mozzarella, salame piccante, peperoni, cipolla, capperi,
+            peperoncino fresco
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          CINQUE
+          <div class="text-white">
+            bufala, patate a fette, cipolletta, porcini, tuma, salsiccia,
+            scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          SEI
+          <div class="text-white">
+            mozzarella, porcini, coppata, ricotta salata, pomodorino, olive nere
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          SETTE
+          <div class="text-white">
+            pomodoro, mozzarella, coppata, melanzane, wurstel, ricotta salata
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          4 FORMAGGI DEL PIZZAIOLO
+          <div class="text-white">
+            mozzarella, pepato, gorgonzola, grana , acciughe, cipolletta, salame
+            piccante
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 8, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+      </div>
+      <div
+        class="flex bg-red-600 text-2xl text-white tracking-widest justify-around"
+      >
+        <div class="flex items-center justify-center p-4">PIZZE MINI</div>
+        <div class="flex items-center justify-center p-4">
+          € 1, 50 IN MENO RISPETTO ALLA PIZZA SCELTA
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 p-2 text-yellow-300 text-center mt-2">
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-start sm:pl-48"
+        >
+          CALZONI
+        </div>
+        <div class="bg-red-600"></div>
+        <div class="bg-red-600"></div>
+
+        <div class="p-4">
+          CLASSICO
+          <div class="text-white">pomodoro, mozzarella, prosciutto</div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 50</div>
+        <div></div>
+        <div class="p-4">
+          WURSTEL
+          <div class="text-white">pomodoro, mozzarella, patatine, wurstel</div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 50</div>
+        <div></div>
+        <div class="p-4">
+          CALZONE VERDE
+          <div class="text-white">
+            mozzarella, spinaci, olive, cipolla, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 50</div>
+        <div></div>
+        <div class="p-4">
+          SICILIANO
+          <div class="text-white">
+            mozzarella, pepato, salsiccia, olive, cipolla, acciughe
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 6, 50</div>
+        <div></div>
+        <div class="p-4">
+          SFIZIOSO
+          <div class="text-white">
+            mozzarella, patate al forno, speck, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 6, 50</div>
+        <div></div>
+        <div class="p-4">
+          PISTACCHIO
+          <div class="text-white">
+            mozzarella, prosciutto, crema di pistacchio, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 7, 50</div>
+      </div>
+      <!--pizzoli-->
+      <div class="grid grid-cols-3 p-2 text-yellow-300 text-center">
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-center justify-center"
+        >
+          PIZZOLI
+        </div>
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-center justify-center"
+        >
+          PICCOLO
+        </div>
+        <div
+          class="flex bg-red-600 p-4 text-2xl text-white tracking-widest items-center justify-center"
+        >
+          GRANDE
+        </div>
+        <div class="p-4">
+          UNO
+          <div class="text-white">mozzarella, prosciutto cotto, grana</div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+        <div class="p-4">
+          DUE
+          <div class="text-white">
+            pomodorino, mozzarella, rucola, crudo, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+        <div class="p-4">
+          TRE
+          <div class="text-white">
+            pomodorino, mozzarella, rucola, salsiccia, scaglie di grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+        <div class="p-4">
+          QUATTRO
+          <div class="text-white">
+            pepato, mozzarella, grana, salsiccia, rucola, cipolla scaglie di
+            grana
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+        <div class="p-4">
+          CINQUE
+          <div class="text-white">
+            mozzarella, patate al forno, salsiccia, cipolla, olive
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+        <div class="p-4">
+          SEI
+          <div class="text-white">hamburger, mozzarella, patatine</div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 9, 50</div>
+        <div class="p-4 flex items-center justify-center">€ 22, 00</div>
+        <div class="p-4">
+          SETTE
+          <div class="text-white">
+            mozzarella, spinaci, tuma, salsiccia, olive, cipolletta
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+        <div class="p-4">
+          OTTO
+          <div class="text-white">
+            mozzarella, salame dolce, scamorza affumicata, porcini, cipolletta
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-center">€ 5, 00</div>
+        <div class="p-4 flex items-center justify-center">€ 10, 00</div>
+      </div>
+    </div>
+  </body>
+</html>
