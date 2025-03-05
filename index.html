@@ -24,7 +24,38 @@
           <a href="#" class="text-white hover:text-yellow-300">Home</a>
           <a href="#" class="text-white hover:text-yellow-300">Menu</a>
           <a href="#" class="text-white hover:text-yellow-300"> About us</a>
-          <a href="#" class="text-white hover:text-yellow-300">Contact</a>
+          <a
+            href="#"
+            class="text-white hover:text-yellow-300"
+            onclick="toggleModal(true)"
+            >Contact</a
+          >
+        </div>
+
+        <div id="modal" class="fixed inset-0 flex items-center hidden">
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg w-full h-96 text-white mt-4 "
+          >
+            <div class="text-yellow-300 tracking-widest font-bold">
+              CONSEGNA A DOMICILIO:
+            </div>
+            <ul class="text-yellow-300 tracking-widest mt-5 gap-6>
+              <li><a href="tel:3760540553">📞 376 0540553</a></li>
+              <li><a href="tel:0958832260">📞 095 8832260</a></li>
+            </ul>
+            <div class="text-orange-100 tracking-widest mt-9">
+              📍 VIALLE EUROPA - BIANCAVILLA CT
+            </div>
+            <div class="text-orange-100 tracking-widest">
+              ❌ CHIUSURA SETTIMANALE: MARTEDÌ
+            </div>
+            <button
+              class="mt-10 px-4 py-2 bg-red-500 text-white rounded-lg"
+              onclick="toggleModal(false)"
+            >
+              Chiudi
+            </button>
+          </div>
         </div>
         <!-- Secțiunea "Despre Noi" în burger menu -->
 
@@ -389,8 +420,7 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
-    </script>
-    <script>
+
       document
         .getElementById("menu-card")
         .addEventListener("click", function () {
@@ -404,6 +434,10 @@
             icon.textContent = "▼";
           }
         });
+
+      function toggleModal(show) {
+        document.getElementById("modal").classList.toggle("hidden", !show);
+      }
     </script>
   </body>
 </html>
