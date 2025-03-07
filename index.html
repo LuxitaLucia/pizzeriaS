@@ -21,12 +21,7 @@
 
         <!-- Meniu desktop -->
         <div class="hidden md:flex space-x-6 gap-5 text-xl">
-          <a
-            href="#"
-            class="text-white hover:text-yellow-300"
-            onclick="toggleModal('homeModal', true)"
-            >Home</a
-          >
+          <a href="#" class="text-white hover:text-yellow-300">Home</a>
           <a href="#" class="text-white hover:text-yellow-300">Menu</a>
           <a href="#" class="text-white hover:text-yellow-300"> About us</a>
           <a
@@ -37,22 +32,10 @@
           >
         </div>
 
-        <div id="homeModal" class="fixed inset-0 flex items-center hidden">
-          <div
-            class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md h-96 text-white mt-4"
-          >
-            <div class="text-yellow-300 tracking-widest font-bold"></div>
-
-            <button
-              class="mt-10 px-4 py-2 bg-red-500 text-white rounded-lg"
-              onclick="toggleModal('homeModal', false)"
-            >
-              Chiudi
-            </button>
-          </div>
-        </div>
-
-        <div id="modal" class="fixed inset-0 flex items-center hidden">
+        <div
+          id="modal"
+          class="fixed inset-0 hidden items-center justify-center"
+        >
           <div
             class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md h-96 text-white mt-4"
           >
@@ -379,7 +362,7 @@
         <!-- Pizza 1 -->
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
           <img
-            src="/carbonara.web"
+            src="./carbonara.web"
             alt="Pizza  CARBONARA"
             class="mx-auto rounded-lg"
           />
@@ -393,7 +376,7 @@
         <!-- Pizza 2 -->
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
           <img
-            src="/carbonara.web"
+            src="./carbonara.web"
             alt="Pizza  GUSTOSA"
             class="mx-auto rounded-lg"
           />
@@ -407,7 +390,7 @@
         <!-- Pizza 3 -->
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
           <img
-            src="/carbonara.web"
+            src="./carbonara.web"
             alt="Pizza  RUSTICANA"
             class="mx-auto rounded-lg"
           />
@@ -422,7 +405,7 @@
         <!-- Pizza 4 -->
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
           <img
-            src="/carbonara.web"
+            src="./carbonara.web"
             alt="Pizza CONTADINA"
             class="mx-auto rounded-lg"
           />
@@ -459,8 +442,19 @@
         });
 
       function toggleModal(modalId, show) {
-        document.getElementById(modalId).classList.toggle("hidden", !show);
+        let modal = document.getElementById(modalId);
+        if (show) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        } else {
+          modal.classList.remove("flex");
+          modal.classList.add("hidden");
+        }
       }
+
+      // function toggleModal(modalId, show) {
+      //   document.getElementById(modalId).classList.toggle("hidden", !show);
+      // }
 
       // function toggleModal(show) {
       //   document.getElementById("homeModal").classList.toggle("hidden", !show);
