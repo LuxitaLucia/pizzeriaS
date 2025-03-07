@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria Stella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import tailwindConfig from "/tailwind.config.js";
+      tailwind.config = tailwindConfig;
+    </script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-red-800 p-4 shadow-2xl">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-3xl font-bold"
+          >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
+        </a>
+
+        <div class="hidden md:flex space-x-6 gap-5 text-xl">
+          <a href="/" class="text-white hover:text-yellow-300">Home</a>
+          <a href="/menu/pizze-speciali" class="text-yellow-300">Menu</a>
+          <a href="/about-us" class="text-white hover:text-yellow-300">
+            About us</a
+          >
+          <a href="/contact" class="text-white hover:text-yellow-300"
+            >Contact</a
+          >
+        </div>
+
+        <div
+          id="modal"
+          class="fixed inset-0 hidden items-center justify-center"
+        >
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md h-96 text-white mt-4"
+          >
+            <div class="text-yellow-300 tracking-widest font-bold">
+              CONSEGNA A DOMICILIO:
+            </div>
+
+            <ul class="text-yellow-300 tracking-widest mt-5 gap-6">
+              <li><a href="tel:3760540553">📞 376 0540553</a></li>
+              <li><a href="tel:0958832260">📞 095 8832260</a></li>
+            </ul>
+            <div class="text-orange-100 tracking-widest mt-9">
+              📍 VIALLE EUROPA - BIANCAVILLA CT
+            </div>
+            <div class="text-orange-100 tracking-widest">
+              ❌ CHIUSURA SETTIMANALE: MARTEDÌ
+            </div>
+            <button
+              class="mt-10 px-4 py-2 bg-red-500 text-white rounded-lg"
+              onclick="toggleModal( 'modal', false)"
+            >
+              Chiudi
+            </button>
+          </div>
+        </div>
+        <!-- Secțiunea "Despre Noi" în burger menu -->
+
+        <!-- Meniu mobil (burger) -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl">
+          &#9776;
+        </button>
+      </div>
+
+      <!-- Meniu mobil ascuns -->
+      <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-3">
+        <a href="#" class="block text-white py-2">Home</a>
+        <a href="#" class="block text-white py-2">Menu</a>
+        <a href="#" class="block text-white py-2">About us</a>
+        <a href="#" class="block text-white py-2" onclick="toggleModal(true)"
+          >Contact</a
+        >
+
+        <!-- Secțiunea "Despre Noi" în burger menu -->
+        <div class="text-white mt-4 border-t border-yellow-300 pt-4">
+          <div class="text-yellow-300 tracking-widest font-bold">
+            CONSEGNA A DOMICILIO:
+          </div>
+          <ul class="text-yellow-300 tracking-widest">
+            <li><a href="tel:3760540553">📞 376 0540553</a></li>
+            <li><a href="tel:0958832260">📞 095 8832260</a></li>
+          </ul>
+          <div class="text-orange-100 tracking-widest mt-2">
+            📍 VIALLE EUROPA - BIANCAVILLA CT
+          </div>
+          <div class="text-orange-100 tracking-widest">
+            ❌ CHIUSURA SETTIMANALE: MARTEDÌ
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg-gray-900 flex">
+      <div class="w-full max-w-sm">
+        <div
+          id="menu-card"
+          class="bg-red-600 p-3 text-white text-2xl tracking-widest flex justify-between items-center cursor-pointer"
+        >
+          PIZZE SPECIALI
+          <span id="toggle-icon">▼</span>
+        </div>
+        <div id="menu-content" class="hidden p-4 bg-gray-800 text-white">
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">CARBONARA</div>
+            <div class="text-sm">
+              mozzarella, coppata, uovo, scaglie di grana, pepe nero
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €7,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">PICCANTINA</div>
+            <div class="text-sm">
+              pomodoro, acciughe, olive, capperi, cipolla, peperoncino
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €7,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">GUSTOSA</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, peperoni, salsiccia, cipolla, scaglie di
+              grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">ORTOLANA</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, peperoni , funghi, carciofi, olive, cipolla,
+              scaglie di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">
+              BRACCIO DI FERRO
+            </div>
+            <div class="text-sm">
+              mozzarella, spinaci , bresaola, fonduta di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">BARONESSA</div>
+            <div class="text-sm">
+              bufala, salsiccia, nduja, patate a fette, capperi, grana crocante
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">RUSTICANA</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, acciughe, capperi, olive, cipolletta,
+              asparagi, coppata
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">TREZZA</div>
+            <div class="text-sm">
+              pesto di pistacchio, bufala, zucchine grigliate, porcini, scaglie
+              di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">BUFALA</div>
+            <div class="text-sm">
+              pomodorino, rucola, coppata, burrata, scaglie di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">
+              PISTACCHIOSA (con bordo ripieno)
+            </div>
+            <div class="text-sm">
+              crema di pistacchio, bufala, prosciutto cotto, scaglie di grana,
+              burrata, granella di pistacchio
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €15,50</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">CONTADINA</div>
+            <div class="text-sm">
+              mozzarella, pomodoro, salame dolce, peperoni, carciofi, funghi
+              olive, cipolletta
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">SUFFLE'</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, prosciutto cotto, funghi, scaglie
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €6,50</span>
+              <span>Maxi: €18,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">UNO</div>
+            <div class="text-sm">
+              mozzarella, friarielli, nduja, cipolletta, olive, grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">DUE</div>
+            <div class="text-sm">
+              mozzarella, salame dolce, peperoni, olive, tuma
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">TRE</div>
+            <div class="text-sm">
+              mozzarella, pomodorino, peperoni, salsiccia piccante, provola
+              affumicata
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">QUATTRO</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, salame piccante, peperoni, cipolla, capperi,
+              peperoncino fresco
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">CINQUE</div>
+            <div class="text-sm">
+              bufala, patate a fette, cipolletta, porcini, tuma, salsiccia,
+              scaglie di grana
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">SEI</div>
+            <div class="text-sm">
+              mozzarella, porcini, coppata, ricotta salata, pomodorino, olive
+              nere
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €9,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">SETTE</div>
+            <div class="text-sm">
+              pomodoro, mozzarella, coppata, melanzane, wurstel, ricotta salata
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="text-yellow-300 text-lg font-bold">
+              4 FORMAGGI DEL PIZZAIOLO
+            </div>
+            <div class="text-sm">
+              mozzarella, pepato, gorgonzola, grana , acciughe, cipolletta,
+              salame piccante
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Normale: €8,50</span>
+              <span>Maxi: €22,00</span>
+            </div>
+          </div>
+
+          <div class="mb-4 border-b border-gray-700 pb-2">
+            <div class="flex justify-between mt-2 bg-red-600 p-4">
+              <span>PIZZE MINI</span>
+              <span> € 1, 50 IN MENO RISPETTO ALLA PIZZA SCELTA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secțiune meniu -->
+    <section class="container mx-auto py-10">
+      <h2 class="text-3xl font-bold text-center text-red-700 mb-6">
+        🍕 Il nostro Menu
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- Pizza 1 -->
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="./carbonara.web"
+            alt="Pizza  CARBONARA"
+            class="mx-auto rounded-lg"
+          />
+          <h3 class="text-xl font-semibold mt-4">CARBONARA</h3>
+          <p class="text-gray-600">
+            mozzarella, coppata, uovo, scaglie di grana, pepe nero
+          </p>
+          <p class="text-red-600 font-bold mt-2">€ 7, 50</p>
+        </div>
+
+        <!-- Pizza 2 -->
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="./carbonara.web"
+            alt="Pizza  GUSTOSA"
+            class="mx-auto rounded-lg"
+          />
+          <h3 class="text-xl font-semibold mt-4">GUSTOSA</h3>
+          <p class="text-gray-600">
+            pomodoro, mozzarella, peperoni, salsiccia, cipolla, scaglie di grana
+          </p>
+          <p class="text-red-600 font-bold mt-2">€ 8, 50</p>
+        </div>
+
+        <!-- Pizza 3 -->
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="./carbonara.web"
+            alt="Pizza  RUSTICANA"
+            class="mx-auto rounded-lg"
+          />
+          <h3 class="text-xl font-semibold mt-4">RUSTICANA</h3>
+          <p class="text-gray-600">
+            pomodoro, mozzarella, acciughe, capperi, olive, cipolletta,
+            asparagi, coppata
+          </p>
+          <p class="text-red-600 font-bold mt-2">€ 9, 50</p>
+        </div>
+
+        <!-- Pizza 4 -->
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="./carbonara.web"
+            alt="Pizza CONTADINA"
+            class="mx-auto rounded-lg"
+          />
+          <h3 class="text-xl font-semibold mt-4">CONTADINA</h3>
+          <p class="text-gray-600">
+            mozzarella, pomodoro, salame dolce, peperoni, carciofi, funghi
+            olive, cipolletta
+          </p>
+          <p class="text-red-600 font-bold mt-2">€ 9, 50</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script pentru meniu mobil -->
+    <script>
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("menu-card")
+        .addEventListener("click", function () {
+          const content = document.getElementById("menu-content");
+          const icon = document.getElementById("toggle-icon");
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            icon.textContent = "▲";
+          } else {
+            content.classList.add("hidden");
+            icon.textContent = "▼";
+          }
+        });
+
+      function toggleModal(modalId, show) {
+        let modal = document.getElementById(modalId);
+        if (show) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        } else {
+          modal.classList.remove("flex");
+          modal.classList.add("hidden");
+        }
+      }
+
+      // function toggleModal(modalId, show) {
+      //   document.getElementById(modalId).classList.toggle("hidden", !show);
+      // }
+
+      // function toggleModal(show) {
+      //   document.getElementById("homeModal").classList.toggle("hidden", !show);
+      // }
+    </script>
+  </body>
+</html>
