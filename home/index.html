@@ -92,7 +92,7 @@
       <div>
         <img
           class="block w-full h-auto object-cover mt-8"
-          src="./wood-fired-pizza.jpg"
+          src="/photos/wood-fired-pizza.jpg"
           alt="photo-pizza"
         />
       </div>
@@ -100,7 +100,7 @@
       <div class="relative group">
         <img
           class="opacity-60 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"
-          src="./Pizza_Dough.webp"
+          src="/photos/Pizza_Dough.web"
           alt="Pizza_Dough"
         />
 
@@ -130,39 +130,6 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
-
-      document
-        .getElementById("menu-card")
-        .addEventListener("click", function () {
-          const content = document.getElementById("menu-content");
-          const icon = document.getElementById("toggle-icon");
-          if (content.classList.contains("hidden")) {
-            content.classList.remove("hidden");
-            icon.textContent = "▲";
-          } else {
-            content.classList.add("hidden");
-            icon.textContent = "▼";
-          }
-        });
-
-      function toggleModal(modalId, show) {
-        let modal = document.getElementById(modalId);
-        if (show) {
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
-        } else {
-          modal.classList.remove("flex");
-          modal.classList.add("hidden");
-        }
-      }
-
-      // function toggleModal(modalId, show) {
-      //   document.getElementById(modalId).classList.toggle("hidden", !show);
-      // }
-
-      // function toggleModal(show) {
-      //   document.getElementById("homeModal").classList.toggle("hidden", !show);
-      // }
     </script>
   </body>
 </html>
