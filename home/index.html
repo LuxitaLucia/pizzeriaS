@@ -6,7 +6,7 @@
     <title>Pizzeria Stella</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module">
-      import tailwindConfig from "/tailwind.config.js";
+      import tailwindConfig from "../tailwind.config.js";
       tailwind.config = tailwindConfig;
     </script>
   </head>
@@ -58,7 +58,7 @@
       </div>
     </nav>
 
-    <section class="w-full py-10 px-6">
+    <section class="w-full">
       <div>
         <img
           class="block w-full h-auto object-cover mt-8"
@@ -75,8 +75,8 @@
         />
 
         <div class="flex items-center justify-center absolute inset-0">
-          <div class="flex flex-col text-center rounded p-6">
-            <div class="font-bold">CONSEGNA A DOMICILIO:</div>
+          <div class="flex flex-col text-center">
+            <div class="font-bold mt-2">CONSEGNA A DOMICILIO:</div>
             <div>
               <ul>
                 <li><a href="tel:3760540553">📞 376 0540553</a></li>
