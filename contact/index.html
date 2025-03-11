@@ -33,37 +33,6 @@
           <a href="/contact" class="text-yellow-300">Contact</a>
         </div>
 
-        <div
-          id="modal"
-          class="fixed inset-0 hidden items-center justify-center"
-        >
-          <div
-            class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md h-96 text-white mt-4"
-          >
-            <div class="text-yellow-300 tracking-widest font-bold">
-              CONSEGNA A DOMICILIO:
-            </div>
-
-            <ul class="text-yellow-300 tracking-widest mt-5 gap-6">
-              <li><a href="tel:3760540553">📞 376 0540553</a></li>
-              <li><a href="tel:0958832260">📞 095 8832260</a></li>
-            </ul>
-            <div class="text-orange-100 tracking-widest mt-9">
-              📍 VIALLE EUROPA - BIANCAVILLA CT
-            </div>
-            <div class="text-orange-100 tracking-widest">
-              ❌ CHIUSURA SETTIMANALE: MARTEDÌ
-            </div>
-            <button
-              class="mt-10 px-4 py-2 bg-red-500 text-white rounded-lg"
-              onclick="toggleModal( 'modal', false)"
-            >
-              Chiudi
-            </button>
-          </div>
-        </div>
-        <!-- Secțiunea "Despre Noi" în burger menu -->
-
         <!-- Meniu mobil (burger) -->
         <button id="menu-btn" class="md:hidden text-white text-2xl">
           &#9776;
@@ -87,27 +56,10 @@
           onclick="toggleModal(true)"
           >Contact</a
         >
-
-        <!-- Secțiunea "Despre Noi" în burger menu -->
-        <div class="text-white mt-4 border-t border-yellow-300 pt-4">
-          <div class="text-yellow-300 tracking-widest font-bold">
-            CONSEGNA A DOMICILIO:
-          </div>
-          <ul class="text-yellow-300 tracking-widest">
-            <li><a href="tel:3760540553">📞 376 0540553</a></li>
-            <li><a href="tel:0958832260">📞 095 8832260</a></li>
-          </ul>
-          <div class="text-orange-100 tracking-widest mt-2">
-            📍 VIALLE EUROPA - BIANCAVILLA CT
-          </div>
-          <div class="text-orange-100 tracking-widest">
-            ❌ CHIUSURA SETTIMANALE: MARTEDÌ
-          </div>
-        </div>
       </div>
     </nav>
 
-    <!-- Secțiune meniu -->
+    <!-- Secțiune contact -->
     <section class="container mx-auto py-10 px-6">
       <h2 class="text-4xl font-extrabold text-center mb-8 text-red-800">
         Contact
@@ -146,39 +98,6 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
-
-      document
-        .getElementById("menu-card")
-        .addEventListener("click", function () {
-          const content = document.getElementById("menu-content");
-          const icon = document.getElementById("toggle-icon");
-          if (content.classList.contains("hidden")) {
-            content.classList.remove("hidden");
-            icon.textContent = "▲";
-          } else {
-            content.classList.add("hidden");
-            icon.textContent = "▼";
-          }
-        });
-
-      function toggleModal(modalId, show) {
-        let modal = document.getElementById(modalId);
-        if (show) {
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
-        } else {
-          modal.classList.remove("flex");
-          modal.classList.add("hidden");
-        }
-      }
-
-      // function toggleModal(modalId, show) {
-      //   document.getElementById(modalId).classList.toggle("hidden", !show);
-      // }
-
-      // function toggleModal(show) {
-      //   document.getElementById("homeModal").classList.toggle("hidden", !show);
-      // }
     </script>
   </body>
 </html>
