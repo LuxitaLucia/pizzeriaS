@@ -56,7 +56,182 @@
       </div>
     </nav>
 
-    <section class="w-full">
+    <section
+      class="relative bg-cover bg-center py-16 px-6"
+      style="background-image: url('/photos/Pizza_Dough.web')"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <!-- Overlay -->
+      <!-- Hero Section -->
+      <div class="max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp">
+        <h1
+          class="text-5xl font-bold text-red-600 drop-shadow-lg opacity-0 animate-slideInLeft"
+        >
+          Pizzeria <i class="text-yellow-300">Stella</i>
+        </h1>
+        <p class="mt-16 text-lg text-white">
+          Da noi la pizza è più di un semplice piatto… è passione, tradizione e
+          amore per il buon cibo! 🍕❤️ Prepariamo l’impasto a mano ogni giorno,
+          lasciandolo lievitare a lungo per ottenere una pizza leggera e
+          gustosa. Usiamo solo ingredienti freschi e di qualità, perché crediamo
+          che il segreto di una buona pizza sia nella semplicità e
+          nell’attenzione ai dettagli. Dal primo morso sentirai il sapore
+          autentico dell’Italia! 🇮🇹🔥 Vieni a trovarci e scopri il nostro menù…
+          ti aspettiamo con il forno caldo e un sorriso!
+        </p>
+        <button
+          class="mt-6 px-6 py-3 bg-red-500 text-white font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
+        >
+          <a href="/menu/pizze-speciali/">Guarda il menu</a>
+        </button>
+      </div>
+    </section>
+    <!-- About Us -->
+    <div
+      class="flex flex-col md:flex-row items-center gap-10 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-200"
+    >
+      <img
+        src="/photos/wood-fired-pizza.jpg"
+        alt="Chef che prepara la pizza"
+        class="w-full md:w-1/2 rounded-lg shadow-xl hover:shadow-2xl transition"
+      />
+      <div>
+        <h2 class="text-3xl font-semibold text-yellow-600 drop-shadow">
+          Chi siamo
+        </h2>
+        <p class="mt-4 text-gray-700">
+          Siamo appassionati della vera pizza italiana e utilizziamo solo
+          ingredienti di qualità.
+        </p>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400">
+      <h2 class="text-3xl font-semibold text-red-600 text-center drop-shadow">
+        Il nostro menu
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div
+          class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+        >
+          <img
+            src="/photos/Carbonara.web.webp"
+            class="w-full rounded-lg"
+            alt="Pizza Margherita"
+          />
+          <h3 class="text-xl font-semibold mt-3 text-red-600">
+            Pizza Margherita
+          </h3>
+          <p class="text-gray-700">Mozzarella, pomodoro, basilico</p>
+        </div>
+        <div
+          class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+        >
+          <img
+            src="/photos/Carbonara.web.webp"
+            class="w-full rounded-lg"
+            alt="Pizza Pepperoni"
+          />
+          <h3 class="text-xl font-semibold mt-3 text-red-600">
+            Pizza Pepperoni
+          </h3>
+          <p class="text-gray-700">Pepperoni, mozzarella, salsa di pomodoro</p>
+        </div>
+        <div
+          class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+        >
+          <img
+            src="/photos/Carbonara.web.webp"
+            class="w-full rounded-lg"
+            alt="Pizza Quattro Formaggi"
+          />
+          <h3 class="text-xl font-semibold mt-3 text-red-600">
+            Quattro Formaggi
+          </h3>
+          <p class="text-gray-700">
+            Mozzarella, gorgonzola, parmigiano, ricotta
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-600">
+      <h2
+        class="text-3xl font-semibold text-yellow-600 text-center drop-shadow"
+      >
+        Recensioni dei clienti
+      </h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div
+          class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+        >
+          <p class="text-gray-700 italic">
+            "La migliore pizza che abbia mai mangiato!"
+          </p>
+          <p class="mt-2 font-semibold text-red-600">- Andrea Rossi</p>
+        </div>
+        <div
+          class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+        >
+          <p class="text-gray-700 italic">
+            "Sapori autentici, gusto incredibile!"
+          </p>
+          <p class="mt-2 font-semibold text-red-600">- Elena Bianchi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Location -->
+    <div
+      class="mt-16 max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp delay-800"
+    >
+      <h2 class="text-3xl font-semibold text-red-600 drop-shadow">Contatti</h2>
+      <p class="mt-2 text-gray-700">
+        Siamo qui per te! Vieni a trovarci o ordina online.
+      </p>
+      <p class="mt-4 text-gray-800 font-semibold">
+        📍 Via della Pizza 10, Roma
+      </p>
+      <p class="text-gray-800 font-semibold">📞 0723 456 789</p>
+    </div>
+
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 2s ease-out forwards;
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .animate-slideInLeft {
+        animation: slideInLeft 2s ease-out forwards;
+      }
+
+      .drop-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+
+    <!-- <section class="w-full">
       <div>
         <img
           class="block w-full h-auto object-cover mt-8"
@@ -67,7 +242,7 @@
 
       <div class="relative group">
         <img
-          class="opacity-60 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"
+          class="block w-full h-36 object-cover"
           src="/photos/Pizza_Dough.web"
           alt="Pizza_Dough"
         />
@@ -89,7 +264,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Script pentru meniu mobil -->
     <script>
