@@ -9,81 +9,92 @@
       import tailwindConfig from "../tailwind.config.js";
       tailwind.config = tailwindConfig;
     </script>
+
+    <style>
+      .hero-section {
+        background-image: url("/photos/Pizza_Dough.web");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="bg-red-800 p-4 shadow-2xl">
-      <div class="container mx-auto flex justify-between items-center">
-        <a href="/" class="text-white text-3xl font-bold"
-          >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
-        </a>
+    <header>
+      <!-- Navbar -->
+      <nav class="bg-red-800 p-4 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="/" class="text-white text-3xl font-bold"
+            >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
+          </a>
 
-        <!-- Meniu desktop -->
-        <div class="hidden md:flex space-x-6 gap-5 text-xl">
+          <!-- Meniu desktop -->
+          <div class="hidden md:flex space-x-6 gap-5 text-xl">
+            <a
+              href="/menu/pizze-speciali/"
+              class="text-white hover:text-yellow-300"
+              >Menu</a
+            >
+            <a href="/about-us/" class="text-white hover:text-yellow-300">
+              Chi Siamo</a
+            >
+            <a href="/contact" class="text-white hover:text-yellow-300"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Meniu mobil (burger) -->
+          <button id="menu-btn" class="md:hidden text-white text-2xl">
+            &#9776;
+          </button>
+        </div>
+
+        <!-- Meniu mobil ascuns -->
+        <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-6 m-5">
           <a
-            href="/menu/pizze-speciali/"
-            class="text-white hover:text-yellow-300"
+            href="/menu/pizze-speciali"
+            class="block text-white py-2 hover:text-yellow-300"
             >Menu</a
           >
-          <a href="/about-us/" class="text-white hover:text-yellow-300">
-            Chi Siamo</a
+          <a
+            href="/about-us"
+            class="block text-white py-2 hover:text-yellow-300"
+            >Chi Siamo</a
           >
-          <a href="/contact" class="text-white hover:text-yellow-300"
+          <a href="/contact" class="block text-white py-2 hover:text-yellow-300"
             >Contact</a
           >
         </div>
-
-        <!-- Meniu mobil (burger) -->
-        <button id="menu-btn" class="md:hidden text-white text-2xl">
-          &#9776;
-        </button>
-      </div>
-
-      <!-- Meniu mobil ascuns -->
-      <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-6 m-5">
-        <a
-          href="/menu/pizze-speciali"
-          class="block text-white py-2 hover:text-yellow-300"
-          >Menu</a
-        >
-        <a href="/about-us" class="block text-white py-2 hover:text-yellow-300"
-          >Chi Siamo</a
-        >
-        <a href="/contact" class="block text-white py-2 hover:text-yellow-300"
-          >Contact</a
-        >
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <section
-      class="relative bg-cover bg-center py-16 px-6"
-      style="background-image: url('/photos/Pizza_Dough.web')"
+      class="hero-section relative bg-cover bg-center min-h-screen px-4 sm:px-6 flex items-center justify-center"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <!-- Overlay -->
-      <!-- Hero Section -->
-      <div class="max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp">
+      <div class="max-w-4xl text-center relative z-10 animate-fadeInUp">
         <h1
-          class="text-5xl font-bold text-red-600 drop-shadow-lg opacity-0 animate-slideInLeft"
+          class="tracking-wider text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-600 drop-shadow-md opacity-0 animate-slideInLeft"
         >
           Pizzeria <i class="text-yellow-300">Stella</i>
         </h1>
 
         <button
-          class="mt-6 px-6 py-3 bg-red-500 text-white font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
+          class="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white text-lg sm:text-xl font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
         >
           <a href="/menu/pizze-speciali/">Guarda il menu</a>
         </button>
       </div>
     </section>
+
     <!-- About Us -->
     <div
       class="mt-9 flex flex-col md:flex-row items-center gap-10 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-200"
     >
       <img
         src="/photos/wood-fired-pizza.jpg"
-        alt="Chef che prepara la pizza"
+        alt=""
         class="w-full md:w-1/2 rounded-lg shadow-xl hover:shadow-2xl transition"
       />
       <div>
@@ -178,18 +189,6 @@
       </div>
     </div>
 
-    <!-- Contact & Location -->
-    <div
-      class="my-16 max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp delay-800"
-    >
-      <h2 class="text-3xl font-semibold text-red-600 drop-shadow">Contatti</h2>
-      <p class="mt-2 text-gray-700">Siamo qui per te! Vieni a trovarci.</p>
-      <p class="mt-4 text-gray-800 font-semibold">
-        📍 Vialle Europa, BIANCAVILLA
-      </p>
-      <p class="text-gray-800 font-semibold">📞376 0540553</p>
-    </div>
-
     <style>
       @keyframes fadeInUp {
         from {
@@ -260,6 +259,34 @@
     </section> -->
 
     <!-- Script pentru meniu mobil -->
+
+    <footer class="bg-black opacity-85">
+      <section>
+        <div
+          class="max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp delay-800 my-auto p-10 text-white font-semibold"
+        >
+          <h2 class="text-3xl text-red-600 drop-shadow mb-5">Contatti</h2>
+          <div class="mb-5">
+            <p>Siamo qui per te! Vieni a trovarci.</p>
+            <p>📍 Vialle Europa, BIANCAVILLA</p>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="tel:3760540553" class="hover:text-yellow-300"
+                  >📞 376 0540553</a
+                >
+              </li>
+              <li>
+                <a href="tel:0958832260" class="hover:text-yellow-300"
+                  >📞 095 8832260</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
     <script>
       document
         .getElementById("menu-btn")
