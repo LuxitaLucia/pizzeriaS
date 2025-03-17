@@ -16,8 +16,7 @@
         background-size: cover;
         background-position: center;
       }
-    </style>
-    <style>
+
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -55,7 +54,7 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="bg-red-800 p-4 shadow-2xl">
+      <nav class="bg-red-900 p-4 shadow-2xl">
         <div class="container mx-auto flex justify-between items-center">
           <a href="/" class="text-white text-3xl font-bold"
             >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
@@ -83,7 +82,7 @@
         </div>
 
         <!-- Meniu mobil ascuns -->
-        <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-6 m-5">
+        <div id="mobile-menu" class="hidden md:hidden bg-red-900 my-9 mr-0">
           <a
             href="/menu/pizze-speciali"
             class="block text-white py-2 hover:text-yellow-300"
@@ -117,21 +116,17 @@
           </h1>
 
           <button
-            class="mt-16 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white text-lg sm:text-xl font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
+            class="mt-16 px-4 sm:px-6 py-2 sm:py-3 bg-yellow-300 text-black text-lg sm:text-xl font-bold"
           >
             <a href="./menu/pizze-speciali">Guarda il menu</a>
           </button>
         </div>
       </section>
 
-      <section>
-        <div
-          class="gap-10 flex flex-col md:flex-row md:justify-around items-center opacity-0 animate-fadeInUp delay-500 p-16"
-        >
-          <div class="w-full md:w-1/2 p-5">
-            <h2
-              class="text-3xl font-semibold text-yellow-600 text-center drop-shadow mb-10"
-            >
+      <section class="px-4 py-10 lg:py-20">
+        <div class="gap-10 grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-semibold text-red-600 text-center mb-10">
               Chi siamo
             </h2>
             <p class="text-lg text-center md:text-left">
@@ -146,13 +141,11 @@
               forno caldo e un sorriso!
             </p>
           </div>
-          <div
-            class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition"
-          >
+          <div class="shadow-xl hover:shadow-2xl transition duration-1000">
             <img
               src="./photos/wood-fired-pizza.jpg"
               alt="Vari sortimenti di pizza"
-              class="w-full h-auto object-cover transition-transform duration-700 hover:rotate-180 delay-300"
+              class="w-full h-auto object-cover"
             />
           </div>
         </div>
@@ -162,9 +155,7 @@
         <div
           class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400 p-16"
         >
-          <h2
-            class="text-3xl font-semibold text-red-600 text-center drop-shadow mb-10"
-          >
+          <h2 class="text-3xl font-semibold text-red-600 text-center mb-10">
             Ampia Scelta, Gusto Autentico!
           </h2>
           <div class="grid md:grid-cols-3 gap-10">
@@ -333,10 +324,10 @@
 
     <!-- Script pentru meniu mobil -->
 
-    <footer class="bg-red-900 text-white border-t-8 border-yellow-500">
+    <footer class="bg-[#333333] text-white border-t-8 border-yellow-500">
       <section>
         <div
-          class="max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp delay-800 my-auto p-10 text-white font-semibold"
+          class="max-w-5xl mx-auto text-center animate-fadeInUp delay-800 my-auto p-10 text-white font-semibold"
         >
           <h2 class="text-3xl text-red-600 drop-shadow mb-5">Contatti</h2>
           <div class="mb-5">
