@@ -17,6 +17,39 @@
         background-position: center;
       }
     </style>
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 2s ease-out forwards;
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .animate-slideInLeft {
+        animation: slideInLeft 2s ease-out forwards;
+      }
+
+      .drop-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+    </style>
   </head>
 
   <body>
@@ -68,174 +101,200 @@
       </nav>
     </header>
 
-    <section
-      class="hero-section relative bg-cover bg-center min-h-screen px-4 sm:px-6 flex items-center justify-center"
-    >
-      <div class="absolute inset-0 bg-black opacity-50"></div>
-      <!-- Overlay -->
-      <div
-        class="max-w-4xl text-center relative z-10 animate-fadeInUp delay-500"
+    <main>
+      <section
+        class="hero-section relative bg-cover bg-center min-h-screen flex items-center justify-center"
       >
-        <h1
-          class="tracking-wider text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-600 drop-shadow-md opacity-0 animate-slideInLeft"
-        >
-          Pizzeria <i class="text-yellow-300">Stella</i>
-        </h1>
-
-        <button
-          class="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white text-lg sm:text-xl font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
-        >
-          <a href="./menu/pizze-speciali">Guarda il menu</a>
-        </button>
-      </div>
-    </section>
-
-    <!-- About Us -->
-    <section>
-      <div
-        class="my-10 gap-10 flex flex-col md:flex-row md:justify-around items-center opacity-0 animate-fadeInUp delay-500 p-5"
-      >
-        <div class="w-full md:w-1/2 p-5">
-          <h2
-            class="text-3xl font-semibold text-yellow-600 text-center drop-shadow mb-10"
-          >
-            Chi siamo
-          </h2>
-          <p class="text-lg text-center md:text-left">
-            Da noi la pizza è più di un semplice piatto… è passione, tradizione
-            e amore per il buon cibo! Prepariamo l’impasto a mano ogni giorno,
-            lasciandolo lievitare a lungo per ottenere una pizza leggera e
-            gustosa. Usiamo solo ingredienti freschi e di qualità, perché
-            crediamo che il segreto di una buona pizza sia nella semplicità e
-            nell’attenzione ai dettagli. <br />
-            Dal primo morso sentirai il sapore autentico dell’Italia! <br />
-            Vieni a trovarci e scopri il nostro menù… ti aspettiamo con il forno
-            caldo e un sorriso!
-          </p>
-        </div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <!-- Overlay -->
         <div
-          class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition"
+          class="max-w-4xl text-center relative z-10 animate-fadeInUp delay-500"
         >
-          <img
-            src="./photos/wood-fired-pizza.jpg"
-            alt="Vari sortimenti di pizza"
-            class="w-full h-auto object-cover transition-transform duration-700 hover:rotate-180 delay-300"
-          />
-        </div>
-      </div>
-    </section>
+          <h1
+            class="tracking-wider text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-600 drop-shadow-md opacity-0 animate-slideInLeft"
+          >
+            Pizzeria <i class="text-yellow-300">Stella</i>
+          </h1>
 
-    <!-- Menu -->
-    <section>
-      <div class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400">
-        <h2 class="text-3xl font-semibold text-red-600 text-center drop-shadow">
-          "Ampia Scelta, Gusto Autentico!" 🍕✨
-        </h2>
-        <div class="grid md:grid-cols-3 gap-6 mt-6">
-          <div
-            class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+          <button
+            class="mt-16 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white text-lg sm:text-xl font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
           >
-            <img
-              src="./photos/Carbonara.web.webp"
-              class="w-full rounded-lg"
-              alt=""
-            />
-            <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
-            <p class="text-gray-700">
-              mozzarella, coppata, uovo, scaglie di grana, pepe nero
-            </p>
-          </div>
-          <div
-            class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
-          >
-            <img
-              src="./photos/Carbonara.web.webp"
-              class="w-full rounded-lg"
-              alt=""
-            />
-            <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
-            <p class="text-gray-700">
-              mozzarella, coppata, uovo, scaglie di grana, pepe nero
-            </p>
-          </div>
-          <div
-            class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
-          >
-            <img
-              src="./photos/Carbonara.web.webp"
-              class="w-full rounded-lg"
-              alt=""
-            />
-            <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
-            <p class="text-gray-700">
-              mozzarella, coppata, uovo, scaglie di grana, pepe nero
-            </p>
-          </div>
+            <a href="./menu/pizze-speciali">Guarda il menu</a>
+          </button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials -->
-    <section>
-      <div class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-600">
-        <h2
-          class="text-3xl font-semibold text-yellow-600 text-center drop-shadow"
+      <section>
+        <div
+          class="gap-10 flex flex-col md:flex-row md:justify-around items-center opacity-0 animate-fadeInUp delay-500 p-16"
         >
-          Recensioni dei clienti
-        </h2>
-        <div class="mt-6 grid md:grid-cols-2 gap-6">
-          <div
-            class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
-          >
-            <p class="text-gray-700 italic">
-              "La migliore pizza che abbia mai mangiato!"
+          <div class="w-full md:w-1/2 p-5">
+            <h2
+              class="text-3xl font-semibold text-yellow-600 text-center drop-shadow mb-10"
+            >
+              Chi siamo
+            </h2>
+            <p class="text-lg text-center md:text-left">
+              Da noi la pizza è più di un semplice piatto… è passione,
+              tradizione e amore per il buon cibo! Prepariamo l’impasto a mano
+              ogni giorno, lasciandolo lievitare a lungo per ottenere una pizza
+              leggera e gustosa. Usiamo solo ingredienti freschi e di qualità,
+              perché crediamo che il segreto di una buona pizza sia nella
+              semplicità e nell’attenzione ai dettagli. <br />
+              Dal primo morso sentirai il sapore autentico dell’Italia! <br />
+              Vieni a trovarci e scopri il nostro menù… ti aspettiamo con il
+              forno caldo e un sorriso!
             </p>
-            <p class="mt-2 font-semibold text-red-600">- Andrea Rossi</p>
           </div>
           <div
-            class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+            class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition"
           >
-            <p class="text-gray-700 italic">
-              "Sapori autentici, gusto incredibile!"
-            </p>
-            <p class="mt-2 font-semibold text-red-600">- Elena Bianchi</p>
+            <img
+              src="./photos/wood-fired-pizza.jpg"
+              alt="Vari sortimenti di pizza"
+              class="w-full h-auto object-cover transition-transform duration-700 hover:rotate-180 delay-300"
+            />
           </div>
         </div>
-      </div>
-    </section>
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-fadeInUp {
-        animation: fadeInUp 2s ease-out forwards;
-      }
+      </section>
 
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-100px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      .animate-slideInLeft {
-        animation: slideInLeft 2s ease-out forwards;
-      }
+      <section>
+        <div
+          class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400 p-16"
+        >
+          <h2
+            class="text-3xl font-semibold text-red-600 text-center drop-shadow mb-10"
+          >
+            Ampia Scelta, Gusto Autentico!
+          </h2>
+          <div class="grid md:grid-cols-3 gap-10">
+            <a href="./menu/pizze-speciali" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/Carbonara.web.webp"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">
+                  Pizze Speciali
+                </h3>
+              </div>
+            </a>
 
-      .drop-shadow {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-    </style>
+            <a href="/menu/calzoni" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/Carbonara.web.webp"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">Calzoni</h3>
+              </div>
+            </a>
+
+            <a href="/menu/pizzoli" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/Carbonara.web.webp"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">Pizzoli</h3>
+              </div>
+            </a>
+
+            <a href="/menu/saltimbocca/" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/Carbonara.web.webp"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">
+                  Saltimbocca
+                </h3>
+              </div>
+            </a>
+            <a href="/menu/pizze" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/Carbonara.web.webp"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">Pizze</h3>
+              </div>
+            </a>
+            <a href="/menu/pucce/" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/Carbonara.web.webp"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">Pucce</h3>
+              </div>
+            </a>
+            <a href="#" class="block">
+              <div
+                class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./photos/POLLO-ALLO-SPIEDO.jpg"
+                  class="w-full rounded-lg"
+                  alt="Pizza Carbonara"
+                />
+                <h3 class="text-xl font-semibold mt-3 text-red-600">
+                  Pollo allo spiedo
+                </h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div
+          class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-600 p-16"
+        >
+          <h2
+            class="text-3xl font-semibold text-yellow-600 text-center drop-shadow"
+          >
+            Recensioni dei clienti
+          </h2>
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            <div
+              class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+            >
+              <p class="text-gray-700 italic">
+                "La migliore pizza che abbia mai mangiato!"
+              </p>
+              <p class="mt-2 font-semibold text-red-600">- Andrea Rossi</p>
+            </div>
+            <div
+              class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+            >
+              <p class="text-gray-700 italic">
+                "Sapori autentici, gusto incredibile!"
+              </p>
+              <p class="mt-2 font-semibold text-red-600">- Elena Bianchi</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- <section class="w-full">
       <div>
@@ -274,7 +333,7 @@
 
     <!-- Script pentru meniu mobil -->
 
-    <footer class="bg-black opacity-85">
+    <footer class="bg-red-900 text-white border-t-8 border-yellow-500">
       <section>
         <div
           class="max-w-5xl mx-auto text-center opacity-0 animate-fadeInUp delay-800 my-auto p-10 text-white font-semibold"
