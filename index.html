@@ -73,7 +73,9 @@
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <!-- Overlay -->
-      <div class="max-w-4xl text-center relative z-10 animate-fadeInUp">
+      <div
+        class="max-w-4xl text-center relative z-10 animate-fadeInUp delay-500"
+      >
         <h1
           class="tracking-wider text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-600 drop-shadow-md opacity-0 animate-slideInLeft"
         >
@@ -83,112 +85,124 @@
         <button
           class="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white text-lg sm:text-xl font-semibold rounded-lg transition transform hover:scale-110 shadow-2xl"
         >
-          <a href="/menu/pizze-speciali/">Guarda il menu</a>
+          <a href="./menu/pizze-speciali">Guarda il menu</a>
         </button>
       </div>
     </section>
 
     <!-- About Us -->
-    <div
-      class="mt-9 flex flex-col md:flex-row items-center gap-10 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-200"
-    >
-      <img
-        src="/photos/wood-fired-pizza.jpg"
-        alt=""
-        class="w-full md:w-1/2 rounded-lg shadow-xl hover:shadow-2xl transition"
-      />
-      <div>
-        <h2 class="text-3xl font-semibold text-yellow-600 drop-shadow ml-7">
-          Chi siamo
-        </h2>
-        <p class="p-7 text-lg">
-          Da noi la pizza è più di un semplice piatto… è passione, tradizione e
-          amore per il buon cibo! 🍕❤️ Prepariamo l’impasto a mano ogni giorno,
-          lasciandolo lievitare a lungo per ottenere una pizza leggera e
-          gustosa. Usiamo solo ingredienti freschi e di qualità, perché crediamo
-          che il segreto di una buona pizza sia nella semplicità e
-          nell’attenzione ai dettagli. Dal primo morso sentirai il sapore
-          autentico dell’Italia! 🇮🇹🔥 Vieni a trovarci e scopri il nostro menù…
-          ti aspettiamo con il forno caldo e un sorriso!
-        </p>
+    <section>
+      <div
+        class="my-10 gap-10 flex flex-col md:flex-row md:justify-around items-center opacity-0 animate-fadeInUp delay-500 p-5"
+      >
+        <div class="w-full md:w-1/2 p-5">
+          <h2
+            class="text-3xl font-semibold text-yellow-600 text-center drop-shadow mb-10"
+          >
+            Chi siamo
+          </h2>
+          <p class="text-lg text-center md:text-left">
+            Da noi la pizza è più di un semplice piatto… è passione, tradizione
+            e amore per il buon cibo! Prepariamo l’impasto a mano ogni giorno,
+            lasciandolo lievitare a lungo per ottenere una pizza leggera e
+            gustosa. Usiamo solo ingredienti freschi e di qualità, perché
+            crediamo che il segreto di una buona pizza sia nella semplicità e
+            nell’attenzione ai dettagli. <br />
+            Dal primo morso sentirai il sapore autentico dell’Italia! <br />
+            Vieni a trovarci e scopri il nostro menù… ti aspettiamo con il forno
+            caldo e un sorriso!
+          </p>
+        </div>
+        <div
+          class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition"
+        >
+          <img
+            src="./photos/wood-fired-pizza.jpg"
+            alt="Vari sortimenti di pizza"
+            class="w-full h-auto object-cover transition-transform duration-700 hover:rotate-180 delay-300"
+          />
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- Menu -->
-    <div class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400">
-      <h2 class="text-3xl font-semibold text-red-600 text-center drop-shadow">
-        Il nostro menu
-      </h2>
-      <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div
-          class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
-        >
-          <img
-            src="/photos/Carbonara.web.webp"
-            class="w-full rounded-lg"
-            alt="Pizza Margherita"
-          />
-          <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
-          <p class="text-gray-700">
-            mozzarella, coppata, uovo, scaglie di grana, pepe nero
-          </p>
-        </div>
-        <div
-          class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
-        >
-          <img
-            src="/photos/Carbonara.web.webp"
-            class="w-full rounded-lg"
-            alt="Pizza Pepperoni"
-          />
-          <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
-          <p class="text-gray-700">
-            mozzarella, coppata, uovo, scaglie di grana, pepe nero
-          </p>
-        </div>
-        <div
-          class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
-        >
-          <img
-            src="/photos/Carbonara.web.webp"
-            class="w-full rounded-lg"
-            alt="Pizza Quattro Formaggi"
-          />
-          <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
-          <p class="text-gray-700">
-            mozzarella, coppata, uovo, scaglie di grana, pepe nero
-          </p>
+    <section>
+      <div class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400">
+        <h2 class="text-3xl font-semibold text-red-600 text-center drop-shadow">
+          "Ampia Scelta, Gusto Autentico!" 🍕✨
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div
+            class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+          >
+            <img
+              src="./photos/Carbonara.web.webp"
+              class="w-full rounded-lg"
+              alt=""
+            />
+            <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
+            <p class="text-gray-700">
+              mozzarella, coppata, uovo, scaglie di grana, pepe nero
+            </p>
+          </div>
+          <div
+            class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+          >
+            <img
+              src="./photos/Carbonara.web.webp"
+              class="w-full rounded-lg"
+              alt=""
+            />
+            <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
+            <p class="text-gray-700">
+              mozzarella, coppata, uovo, scaglie di grana, pepe nero
+            </p>
+          </div>
+          <div
+            class="bg-white p-4 shadow-xl rounded-lg text-center hover:scale-105 transition-transform hover:bg-yellow-100"
+          >
+            <img
+              src="./photos/Carbonara.web.webp"
+              class="w-full rounded-lg"
+              alt=""
+            />
+            <h3 class="text-xl font-semibold mt-3 text-red-600">CARBONARA</h3>
+            <p class="text-gray-700">
+              mozzarella, coppata, uovo, scaglie di grana, pepe nero
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Testimonials -->
-    <div class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-600">
-      <h2
-        class="text-3xl font-semibold text-yellow-600 text-center drop-shadow"
-      >
-        Recensioni dei clienti
-      </h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div
-          class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+    <section>
+      <div class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-600">
+        <h2
+          class="text-3xl font-semibold text-yellow-600 text-center drop-shadow"
         >
-          <p class="text-gray-700 italic">
-            "La migliore pizza che abbia mai mangiato!"
-          </p>
-          <p class="mt-2 font-semibold text-red-600">- Andrea Rossi</p>
-        </div>
-        <div
-          class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
-        >
-          <p class="text-gray-700 italic">
-            "Sapori autentici, gusto incredibile!"
-          </p>
-          <p class="mt-2 font-semibold text-red-600">- Elena Bianchi</p>
+          Recensioni dei clienti
+        </h2>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div
+            class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+          >
+            <p class="text-gray-700 italic">
+              "La migliore pizza che abbia mai mangiato!"
+            </p>
+            <p class="mt-2 font-semibold text-red-600">- Andrea Rossi</p>
+          </div>
+          <div
+            class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+          >
+            <p class="text-gray-700 italic">
+              "Sapori autentici, gusto incredibile!"
+            </p>
+            <p class="mt-2 font-semibold text-red-600">- Elena Bianchi</p>
+          </div>
         </div>
       </div>
-    </div>
-
+    </section>
     <style>
       @keyframes fadeInUp {
         from {
