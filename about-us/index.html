@@ -10,6 +10,21 @@
       tailwind.config = tailwindConfig;
     </script>
   </head>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+  </style>
 
   <body>
     <!-- Navbar -->
@@ -78,22 +93,33 @@
         </div>
       </div>
     </section>
-
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-fadeInUp {
-        animation: fadeInUp 1s ease-out forwards;
-      }
-    </style>
+    <footer class="bg-[#333333] border-t-8 border-yellow-500">
+      <section class="mb-0">
+        <div
+          class="max-w-5xl mx-auto text-center animate-fadeInUp delay-800 my-auto p-10 font-semibold text-yellow-300"
+        >
+          <h2 class="text-3xl drop-shadow mb-5">Contatti</h2>
+          <div class="mb-5">
+            <p>Siamo qui per te! Vieni a trovarci.</p>
+            <p>📍 Vialle Europa, BIANCAVILLA</p>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="tel:3760540553" class="hover:text-yellow-300"
+                  >📞 376 0540553</a
+                >
+              </li>
+              <li>
+                <a href="tel:0958832260" class="hover:text-yellow-300"
+                  >📞 095 8832260</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
 
     <!-- Script pentru meniu mobil -->
     <script>
