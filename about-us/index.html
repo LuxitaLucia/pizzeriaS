@@ -25,76 +25,127 @@
       animation: fadeInUp 1s ease-out forwards;
     }
   </style>
+  <style>
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px;
+      position: relative;
+      border-radius: 8px;
+    }
+    .carousel img,
+    .carousel video {
+      width: 100%;
+      flex-shrink: 0;
+      display: none;
+    }
+    .carousel img.active,
+    .carousel video.active {
+      display: block;
+    }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+    }
+  </style>
 
   <body>
     <!-- Navbar -->
-    <nav class="bg-red-800 p-5 shadow-2xl">
-      <div class="container mx-auto flex justify-between items-center">
-        <a href="/" class="text-white text-3xl font-bold"
-          >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
-        </a>
+    <header>
+      <nav class="bg-red-800 p-5 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="/" class="text-white text-3xl font-bold"
+            >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
+          </a>
 
-        <!-- Meniu desktop -->
-        <div class="hidden md:flex space-x-6 gap-5 text-xl">
+          <!-- Meniu desktop -->
+          <div class="hidden md:flex space-x-6 gap-5 text-xl">
+            <a
+              href="/menu/pizze-speciali"
+              class="text-white hover:text-yellow-300"
+              >Menu</a
+            >
+            <a href="/about-us" class="text-yellow-300"> Chi Siamo</a>
+            <a href="/contact" class="text-white hover:text-yellow-300"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Meniu mobil (burger) -->
+          <button id="menu-btn" class="md:hidden text-white text-2xl">
+            &#9776;
+          </button>
+        </div>
+
+        <!-- Meniu mobil ascuns -->
+        <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-3">
           <a
             href="/menu/pizze-speciali"
-            class="text-white hover:text-yellow-300"
+            class="block text-white py-2 hover:text-yellow-300"
             >Menu</a
           >
-          <a href="/about-us" class="text-yellow-300"> Chi Siamo</a>
-          <a href="/contact" class="text-white hover:text-yellow-300"
+          <a href="/about-us" class="block text-yellow-300 py-2">Chi Siamo</a>
+          <a href="/contact" class="block text-white py-2 hover:text-yellow-300"
             >Contact</a
           >
         </div>
+      </nav>
+    </header>
 
-        <!-- Meniu mobil (burger) -->
-        <button id="menu-btn" class="md:hidden text-white text-2xl">
-          &#9776;
-        </button>
-      </div>
-
-      <!-- Meniu mobil ascuns -->
-      <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-3">
-        <a
-          href="/menu/pizze-speciali"
-          class="block text-white py-2 hover:text-yellow-300"
-          >Menu</a
-        >
-        <a href="/about-us" class="block text-yellow-300 py-2">Chi Siamo</a>
-        <a href="/contact" class="block text-white py-2 hover:text-yellow-300"
-          >Contact</a
-        >
-      </div>
-    </nav>
-
-    <!-- Secțiune meniu -->
-    <section class="py-16 px-7">
-      <div class="mx-auto text-center">
-        <h2
-          class="text-3xl md:text-4xl font-semibold text-black opacity-0 animate-fadeInUp"
-        >
-          Chi Siamo
-        </h2>
-        <p class="mt-5 text-lg text-black">
-          Siamo un team dedicato alla passione e all'eccellenza, offrendo i
-          migliori servizi ai nostri clienti. La nostra missione è portare
-          qualità, innovazione e professionalità in tutto ciò che facciamo.
-        </p>
-      </div>
-    </section>
-    <section>
-      <div class="text-black font-medium text-center w-full h-auto">
-        <div>
-          <p>Un team dedicato all'eccellenza e all'innovazione.</p>
+    <main>
+      <!-- Secțiune meniu -->
+      <section class="py-16 px-7">
+        <div class="mx-auto text-center text-black">
+          <h2
+            class="text-3xl md:text-4xl font-semibold opacity-0 animate-fadeInUp"
+          >
+            Chi Siamo
+          </h2>
+          <p class="mt-5 text-lg font-medium">
+            Siamo un team dedicato alla passione e all'eccellenza, offrendo i
+            migliori servizi ai nostri clienti. La nostra missione è portare
+            qualità, innovazione e professionalità iin ogni progetto per
+            risultati eccezionali.
+          </p>
         </div>
+      </section>
 
-        <div>
-          <p>Mettiamo passione in ogni progetto per risultati eccezionali.</p>
+      <div class="flex items-center justify-center mb-20">
+        <div class="carousel relative">
+          <img
+            src="/photos/Carbonara.web.webp"
+            alt="Imagine 1"
+            class="active rounded-lg"
+          />
+          <video controls class="rounded-lg">
+            <source src="video.mp4" type="video/mp4" />
+          </video>
+          <img
+            src="/photos/Pizza_Dough.web"
+            alt="Imagine 2"
+            class="rounded-lg"
+          />
+          <div class="carousel-buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+          </div>
         </div>
       </div>
-    </section>
-    <footer class="bg-[#333333] border-t-8 border-yellow-500">
-      <section class="mb-0">
+    </main>
+    <footer class="bg-[#333333] border-t-8 border-yellow-500 mb-0">
+      <section>
         <div
           class="max-w-5xl mx-auto text-center animate-fadeInUp delay-800 my-auto p-10 font-semibold text-yellow-300"
         >
@@ -106,12 +157,12 @@
           <div>
             <ul>
               <li>
-                <a href="tel:3760540553" class="hover:text-yellow-300"
+                <a href="tel:3760540553" class="hover:text-red-600"
                   >📞 376 0540553</a
                 >
               </li>
               <li>
-                <a href="tel:0958832260" class="hover:text-yellow-300"
+                <a href="tel:0958832260" class="hover:text-red-600"
                   >📞 095 8832260</a
                 >
               </li>
@@ -128,6 +179,23 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
+
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(
+        ".carousel img, .carousel video"
+      );
+      function showSlide(index) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+      }
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
     </script>
   </body>
 </html>
