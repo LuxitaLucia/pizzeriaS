@@ -24,8 +24,7 @@
     .animate-fadeInUp {
       animation: fadeInUp 1s ease-out forwards;
     }
-  </style>
-  <style>
+    /* <!-- corusel-style --> */
     .carousel {
       display: flex;
       overflow: hidden;
@@ -62,9 +61,9 @@
   </style>
 
   <body>
-    <!-- Navbar -->
+    <!--Navbar-->
     <header>
-      <nav class="bg-red-800 p-5 shadow-2xl">
+      <nav class="bg-red-900 p-5 shadow-2xl border-b-8 border-red-700">
         <div class="container mx-auto flex justify-between items-center">
           <a href="/" class="text-white text-3xl font-bold"
             >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
@@ -90,7 +89,7 @@
         </div>
 
         <!-- Meniu mobil ascuns -->
-        <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-3">
+        <div id="mobile-menu" class="hidden md:hidden bg-red-800 p-3 m-3">
           <a
             href="/menu/pizze-speciali"
             class="block text-white py-2 hover:text-yellow-300"
@@ -106,63 +105,67 @@
 
     <main>
       <!-- Secțiune meniu -->
-      <section class="py-16 px-7">
-        <div class="mx-auto text-center text-black">
+      <section class="p-4 px-7">
+        <div
+          class="container max-w-5xl mx-auto text-center text-black text-xl p-10 shadow-md"
+        >
           <h2
-            class="text-3xl md:text-4xl font-semibold opacity-0 animate-fadeInUp"
+            class="text-3xl md:text-4xl font-semibold opacity-0 animate-fadeInUp duration-1000"
           >
             Chi Siamo
           </h2>
           <p class="mt-5 text-lg font-medium">
             Siamo un team dedicato alla passione e all'eccellenza, offrendo i
             migliori servizi ai nostri clienti. La nostra missione è portare
-            qualità, innovazione e professionalità iin ogni progetto per
+            qualità, innovazione e professionalità in ogni progetto per
             risultati eccezionali.
           </p>
         </div>
       </section>
 
-      <div class="flex items-center justify-center mb-20">
-        <div class="carousel relative">
-          <img
-            src="/photos/Carbonara.web.webp"
-            alt="Imagine 1"
-            class="active rounded-lg"
-          />
-          <video controls class="rounded-lg">
-            <source src="video.mp4" type="video/mp4" />
-          </video>
-          <img
-            src="/photos/Pizza_Dough.web"
-            alt="Imagine 2"
-            class="rounded-lg"
-          />
-          <div class="carousel-buttons">
-            <button onclick="prevSlide()">❮</button>
-            <button onclick="nextSlide()">❯</button>
+      <section class="p-4">
+        <div class="container flex items-center justify-center mb-20">
+          <div class="carousel relative">
+            <img
+              src="/photos/Carbonara.web.webp"
+              alt="Imagine 1"
+              class="active rounded-lg"
+            />
+            <video controls class="rounded-lg">
+              <source src="video.mp4" type="video/mp4" />
+            </video>
+            <img
+              src="/photos/Pizza_Dough.web"
+              alt="Imagine 2"
+              class="rounded-lg"
+            />
+            <div class="carousel-buttons">
+              <button onclick="prevSlide()">❮</button>
+              <button onclick="nextSlide()">❯</button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
-    <footer class="bg-[#333333] border-t-8 border-yellow-500 mb-0">
+    <footer class="bg-red-900 shadow-2xl border-t-8 border-red-700">
       <section>
         <div
-          class="max-w-5xl mx-auto text-center animate-fadeInUp delay-800 my-auto p-10 font-semibold text-yellow-300"
+          class="mx-auto text-center text-xl animate-fadeInUp delay-800 duration-1000 my-auto p-10 font-semibold text-white"
         >
           <h2 class="text-3xl drop-shadow mb-5">Contatti</h2>
-          <div class="mb-5">
+          <div class="flex flex-col gap-3 my-5">
             <p>Siamo qui per te! Vieni a trovarci.</p>
-            <p>📍 Vialle Europa, BIANCAVILLA</p>
+            <p>📍Vialle Europa, 94, 95033 BIANCAVILLA, CT</p>
           </div>
           <div>
             <ul>
               <li>
-                <a href="tel:3760540553" class="hover:text-red-600"
+                <a href="tel:3760540553" class="hover:text-yellow-500"
                   >📞 376 0540553</a
                 >
               </li>
               <li>
-                <a href="tel:0958832260" class="hover:text-red-600"
+                <a href="tel:0958832260" class="hover:text-yellow-500"
                   >📞 095 8832260</a
                 >
               </li>
