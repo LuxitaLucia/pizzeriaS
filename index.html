@@ -54,7 +54,7 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="bg-red-900 p-4 shadow-2xl">
+      <nav class="bg-red-900 p-4">
         <div class="container mx-auto flex justify-between items-center">
           <a href="/" class="text-white text-3xl font-bold"
             >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
@@ -126,13 +126,10 @@
       <section class="px-4 py-10 lg:py-20">
         <div class="gap-10 grid grid-cols-1 md:grid-cols-2">
           <div>
-            <h2 class="text-3xl font-semibold text-red-600 text-center">
+            <h2 class="text-3xl font-semibold text-red-700 text-center my-10">
               Chi siamo
             </h2>
-            <h2 class="text-3xl font-semibold text-black text-center mb-10">
-              Chi siamo
-            </h2>
-            <p class="text-lg text-center md:text-left">
+            <p class="text-lg text-center md:text-left p-4">
               Da noi la pizza è più di un semplice piatto… è passione,
               tradizione e amore per il buon cibo! Prepariamo l’impasto a mano
               ogni giorno, lasciandolo lievitare a lungo per ottenere una pizza
@@ -144,7 +141,7 @@
               forno caldo e un sorriso!
             </p>
           </div>
-          <div class="shadow-xl hover:shadow-2xl transition duration-1000">
+          <div class="shadow-md hover:shadow-xl transition duration-1000">
             <img
               src="./photos/wood-fired-pizza.jpg"
               alt="Vari sortimenti di pizza"
@@ -154,16 +151,14 @@
         </div>
       </section>
 
-      <section>
+      <section class="p-4">
         <div
-          class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400 p-16"
+          class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-400 p-10"
         >
-          <h2 class="text-3xl font-semibold text-red-600 text-center">
+          <h2 class="text-3xl font-semibold text-red-600 text-center my-10">
             Ampia Scelta, Gusto Autentico!
           </h2>
-          <h2 class="text-3xl font-semibold text-black text-center mb-10">
-            Ampia Scelta, Gusto Autentico!
-          </h2>
+
           <div class="grid md:grid-cols-3 gap-10">
             <a href="./menu/pizze-speciali" class="block">
               <div
@@ -247,13 +242,13 @@
           </div>
         </div>
       </section>
-      <section class="px-4 py-10 lg:py-20">
-        <div class="gap-10 grid grid-cols-1 md:grid-cols-2">
+      <section class="p-4">
+        <div class="gap-8 grid grid-cols-1 md:grid-cols-2 p-10">
           <div>
-            <h2 class="text-3xl font-semibold text-red-600 text-center mb-10">
+            <h2 class="text-3xl font-normal text-gray-800 text-center">
               Ogni Mercoledì: Pollo allo Spiedo su Prenotazione!
             </h2>
-            <p class="text-lg text-center md:text-left">
+            <p class="text-lg text-center md:text-left p-4">
               Ti aspettiamo ogni mercoledì per gustare il nostro delizioso Pollo
               allo Spiedo, preparato con cura e cotto lentamente per ottenere
               una croccantezza irresistibile e un sapore autentico. Solo su
@@ -262,7 +257,7 @@
               regalati un'esperienza di gusto unica!
             </p>
           </div>
-          <div class="shadow-xl hover:shadow-2xl transition duration-1000">
+          <div class="shadow-md hover:shadow-2xl transition duration-1000">
             <img
               src="./photos/POLLO-ALLO-SPIEDO.jpg"
               alt="POLLO-ALLO-SPIEDO"
@@ -272,26 +267,26 @@
         </div>
       </section>
 
-      <section>
+      <section class="p-4">
         <div
-          class="mt-16 max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-600 p-16"
+          class="max-w-5xl mx-auto opacity-0 animate-fadeInUp delay-1000 p-10"
         >
-          <h2 class="text-3xl font-semibold text-center text-red-600">
+          <h2 class="text-3xl font-semibold text-center text-gray-800 italic">
             Recensioni dei clienti
           </h2>
-          <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div class="mt-10 grid md:grid-cols-2 gap-6">
             <div
-              class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+              class="bg-white p-6 shadow-md transform hover:scale-105 transition duration-1000 hover:bg-yellow-100"
             >
-              <p class="text-gray-700 italic">
+              <p class="text-gray-800 italic">
                 "La migliore pizza che abbia mai mangiato!"
               </p>
               <p class="mt-2 font-semibold text-red-600">- Andrea Rossi</p>
             </div>
             <div
-              class="bg-white p-6 shadow-xl rounded-lg transform hover:scale-105 transition hover:bg-yellow-100"
+              class="bg-white p-6 shadow-md transform hover:scale-105 transition duration-1000 hover:bg-yellow-100"
             >
-              <p class="text-gray-700 italic">
+              <p class="text-gray-800 italic">
                 "Sapori autentici, gusto incredibile!"
               </p>
               <p class="mt-2 font-semibold text-red-600">- Elena Bianchi</p>
@@ -338,25 +333,25 @@
 
     <!-- Script pentru meniu mobil -->
 
-    <footer class="bg-[#333333] border-t-8 border-yellow-500">
+    <footer class="bg-red-900 border-t-8 border-red-700">
       <section>
         <div
-          class="max-w-5xl mx-auto text-center animate-fadeInUp delay-800 my-auto p-10 font-semibold text-yellow-300"
+          class="mx-auto text-center text-xl animate-fadeInUp delay-800 duration-1000 my-auto p-10 font-semibold text-white"
         >
           <h2 class="text-3xl drop-shadow mb-5">Contatti</h2>
-          <div class="mb-5">
+          <div class="flex flex-col gap-3 my-5">
             <p>Siamo qui per te! Vieni a trovarci.</p>
-            <p>📍 Vialle Europa, BIANCAVILLA</p>
+            <p>📍Vialle Europa, 94, 95033 BIANCAVILLA, CT</p>
           </div>
           <div>
             <ul>
               <li>
-                <a href="tel:3760540553" class="hover:text-yellow-300"
+                <a href="tel:3760540553" class="hover:text-yellow-500"
                   >📞 376 0540553</a
                 >
               </li>
               <li>
-                <a href="tel:0958832260" class="hover:text-yellow-300"
+                <a href="tel:0958832260" class="hover:text-yellow-500"
                   >📞 095 8832260</a
                 >
               </li>
@@ -365,6 +360,7 @@
         </div>
       </section>
     </footer>
+
     <script>
       document
         .getElementById("menu-btn")
