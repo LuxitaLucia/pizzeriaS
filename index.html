@@ -48,13 +48,51 @@
       .drop-shadow {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
+
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      /* <!-- corusel-style --> */
+      .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        border-radius: 8px;
+      }
+      .carousel img,
+      .carousel video {
+        width: 100%;
+        flex-shrink: 0;
+        display: none;
+      }
+      .carousel img.active,
+      .carousel video.active {
+        display: block;
+      }
+      .carousel-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+      .carousel-buttons button {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+      }
     </style>
   </head>
 
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="bg-red-900 p-4">
+      <nav class="bg-red-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
           <a href="/" class="text-white text-3xl font-bold"
             >🍕 Pizzeria <i class="text-yellow-300">Stella</i>
@@ -104,7 +142,7 @@
       <section
         class="hero-section relative bg-cover bg-center min-h-screen flex items-center justify-center"
       >
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-black opacity-40"></div>
         <!-- Overlay -->
         <div
           class="max-w-4xl text-center relative z-10 animate-fadeInUp delay-500"
@@ -126,10 +164,7 @@
       <section class="px-4 py-10 lg:py-20">
         <div class="gap-10 grid grid-cols-1 md:grid-cols-2">
           <div>
-            <h2 class="text-3xl font-semibold text-red-700 text-center my-10">
-              Chi siamo
-            </h2>
-            <p class="text-lg text-center md:text-left p-4">
+            <p class="text-xl text-center md:text-left p-4">
               Da noi la pizza è più di un semplice piatto… è passione,
               tradizione e amore per il buon cibo! Prepariamo l’impasto a mano
               ogni giorno, lasciandolo lievitare a lungo per ottenere una pizza
@@ -140,13 +175,35 @@
               Vieni a trovarci e scopri il nostro menù… ti aspettiamo con il
               forno caldo e un sorriso!
             </p>
+            <div class="flex justify-end bg-slate-200">
+              <button
+                class="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-300 text-black text-lg sm:text-xl font-bold"
+              >
+                <a href="./menu/pizze-speciali">Guarda il menu</a>
+              </button>
+            </div>
           </div>
-          <div class="shadow-md hover:shadow-xl transition duration-1000">
-            <img
-              src="./photos/wood-fired-pizza.jpg"
-              alt="Vari sortimenti di pizza"
-              class="w-full h-auto object-cover"
-            />
+
+          <div class="container flex items-center justify-center mb-20">
+            <div class="carousel relative">
+              <img
+                src="/photos/Carbonara.web.webp"
+                alt="Imagine 1"
+                class="active rounded-lg"
+              />
+              <video controls class="rounded-lg">
+                <source src="video.mp4" type="video/mp4" />
+              </video>
+              <img
+                src="/photos/Pizza_Dough.web"
+                alt="Imagine 2"
+                class="rounded-lg"
+              />
+              <div class="carousel-buttons">
+                <button onclick="prevSlide()">❮</button>
+                <button onclick="nextSlide()">❯</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -333,7 +390,7 @@
 
     <!-- Script pentru meniu mobil -->
 
-    <footer class="bg-red-900 border-t-8 border-red-700">
+    <footer class="bg-red-800 border-t-8 border-red-700">
       <section>
         <div
           class="mx-auto text-center text-xl animate-fadeInUp delay-800 duration-1000 my-auto p-10 font-semibold text-white"
@@ -367,6 +424,23 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
+
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(
+        ".carousel img, .carousel video"
+      );
+      function showSlide(index) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+      }
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
     </script>
   </body>
 </html>
