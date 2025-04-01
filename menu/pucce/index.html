@@ -53,142 +53,173 @@
         </div>
       </nav>
 
-      <div
-        class="bg-red-800 w-full flex justify-between items-center flex-wrap border-t-2 border-black"
-      >
-        <a
-          href="/menu/pizze-speciali"
-          class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
+      <section>
+        <div
+          class="bg-red-800 w-full flex justify-between items-center flex-wrap font-semibold border-t-2 border-black"
         >
-          PIZZE SPECIALI
-        </a>
+          <a
+            href="/menu/pizze-speciali"
+            class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
+          >
+            PIZZE SPECIALI
+          </a>
 
-        <a
-          href="/menu/calzoni"
-          class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
-        >
-          CALZONI
-        </a>
+          <a
+            href="/menu/calzoni"
+            class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
+          >
+            CALZONI
+          </a>
 
-        <a
-          href="/menu/pizzoli"
-          class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
-        >
-          PIZZOLI
-        </a>
+          <a
+            href="/menu/pizzoli"
+            class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
+          >
+            PIZZOLI
+          </a>
 
-        <a
-          href="/menu/saltimbocca"
-          class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
-        >
-          SALTIMBOCCA
-        </a>
-        <a
-          href="/menu/pizze"
-          class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
-        >
-          PIZZE
-        </a>
+          <a
+            href="/menu/saltimbocca"
+            class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
+          >
+            SALTIMBOCCA
+          </a>
+          <a
+            href="/menu/pizze"
+            class="p-3 text-white text-2xl tracking-widest cursor-pointer hover:text-yellow-300"
+          >
+            PIZZE
+          </a>
 
-        <a
-          href="/menu/pucce"
-          class="p-3 text-2xl tracking-widest cursor-pointer text-yellow-300"
-        >
-          PUCCE
-        </a>
-      </div>
+          <a
+            href="/menu/pucce"
+            class="p-3 text-2xl tracking-widest cursor-pointer text-yellow-300"
+          >
+            PUCCE
+          </a>
+        </div>
+      </section>
     </header>
 
     <main>
       <!-- Secțiune submeniu -->
       <section class="container mx-auto py-10 text-red-700">
-        <h2 class="text-3xl font-bold text-center">PUCCE</h2>
+        <h1 class="text-3xl font-bold text-center">PUCCE</h1>
 
-        <h1 class="text-3xl font-bold text-center mt-5">Il nostro Menu</h1>
+        <div class="text-3xl font-bold text-center mt-5">
+          Impasto ad olio, € 6, 00
+        </div>
       </section>
+      <!-- Secțiune meniu -->
       <section class="container mx-auto p-4">
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
         >
+          <!-- Pizza 1 -->
           <div
-            class="block shadow-xl text-center font-medium hover:scale-105 transition-transform"
+            class="h-full border border-gray-200 text-center shadow-md transition duration-1000 hover:shadow-xl"
           >
-            <img
-              src="/photos/Carbonara.web.webp"
-              class="w-full rounded-lg"
-              alt="Pizza Carbonara"
-            />
-            <div class="my-5 mb-0">
-              <div class="my-5">
-                <div>CARBONARA</div>
-                <div>
-                  mozzarella, coppata, uovo, scaglie di grana, pepe nero
-                </div>
-              </div>
+            <div class="overflow-hidden">
+              <img
+                src="/photos/Carbonara.web.webp"
+                alt="Pizza  CARBONARA"
+                class="scale-1 hover:scale-125 duration-1000"
+              />
+            </div>
+            <div
+              class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[100px] sm:min-h-[114px] xl:min-h-[141px]"
+            >
               <div>
-                <div class="flex justify-between font-bold">
-                  <div>NORMALE</div>
-                  <div>€ 7, 50</div>
-                </div>
-                <div class="flex justify-between font-bold">
-                  <p>MAXI</p>
-                  <p>€ 22, 00</p>
-                </div>
+                <h3 class="font-bold underline">1</h3>
+                <p>
+                  mozzarella, pomodoro a fette, cotto, lattuga, scaglie di
+                  grana, pepe nero
+                </p>
               </div>
             </div>
           </div>
+          <!-- Pizza 2 -->
           <div
-            class="block shadow-xl text-center font-medium hover:scale-105 transition-transform"
+            class="h-full border border-gray-200 text-center shadow-md transition duration-1000 hover:shadow-xl"
           >
-            <img
-              src="/photos/Carbonara.web.webp"
-              class="w-full rounded-lg"
-              alt="Pizza Carbonara"
-            />
-            <div class="my-5 flex flex-col">
-              <div class="my-5">
-                <div>CARBONARA</div>
-                <div>
-                  mozzarella, coppata, uovo, scaglie di grana, pepe nero,
-                  coppata, uovo, scaglie di grana, pepe nero
-                </div>
-              </div>
-              <div class="text-yellow-700">
-                <div class="flex justify-between font-bold">
-                  <div>NORMALE</div>
-                  <div>€ 7, 50</div>
-                </div>
-                <div class="flex justify-between font-bold">
-                  <p>MAXI</p>
-                  <p>€ 22, 00</p>
-                </div>
+            <div class="overflow-hidden">
+              <img
+                src="/photos/Carbonara.web.webp"
+                alt="Pizza  CARBONARA"
+                class="scale-1 hover:scale-125 duration-1000"
+              />
+            </div>
+            <div
+              class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[100px] sm:min-h-[114px] xl:min-h-[141px]"
+            >
+              <div>
+                <h3 class="font-bold underline">2</h3>
+                <p>
+                  bufala, pomodororino, lattuga, crudo, scaglie di grana,
+                  mozzarella
+                </p>
               </div>
             </div>
           </div>
+          <!-- Pizza 3 -->
           <div
-            class="block shadow-xl text-center font-medium hover:scale-105 transition-transform"
+            class="h-full border border-gray-200 text-center shadow-md transition duration-1000 hover:shadow-xl"
           >
-            <img
-              src="/photos/Carbonara.web.webp"
-              class="w-full rounded-lg"
-              alt="Pizza Carbonara"
-            />
-            <div>
+            <div class="overflow-hidden">
+              <img
+                src="/photos/Carbonara.web.webp"
+                alt="Pizza  CARBONARA"
+                class="scale-1 hover:scale-125 duration-1000"
+              />
+            </div>
+            <div
+              class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[100px] sm:min-h-[114px] xl:min-h-[141px]"
+            >
               <div>
-                <div>CARBONARA</div>
-                <div>
-                  mozzarella, coppata, uovo, scaglie di grana, pepe nero
-                </div>
+                <h3 class="font-bold underline">3</h3>
+                <p>pomodoro a fette, lattuga, tonno, olive, pepe nero</p>
               </div>
+            </div>
+          </div>
+          <!-- Pizza 4 -->
+          <div
+            class="h-full border border-gray-200 text-center shadow-md transition duration-1000 hover:shadow-xl"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="/photos/Carbonara.web.webp"
+                alt="Pizza  CARBONARA"
+                class="scale-1 hover:scale-125 duration-1000"
+              />
+            </div>
+            <div
+              class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[100px] sm:min-h-[114px] xl:min-h-[141px]"
+            >
               <div>
-                <div class="flex justify-between">
-                  <div class="text-red-600 font-bold mt-2">NORMALE</div>
-                  <div class="text-red-600 font-bold mt-2">€ 7, 50</div>
-                </div>
-                <div class="flex justify-between">
-                  <p class="text-red-600 font-bold mt-2">MAXI</p>
-                  <p class="text-red-600 font-bold mt-2">€ 22, 00</p>
-                </div>
+                <h3 class="font-bold underline">4</h3>
+                <p>
+                  mozzarella, bresaola, pomodororino, rucola, scaglie di grana
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Pizza 5 -->
+          <div
+            class="h-full border border-gray-200 text-center shadow-md transition duration-1000 hover:shadow-xl"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="/photos/Carbonara.web.webp"
+                alt="Pizza  CARBONARA"
+                class="scale-1 hover:scale-125 duration-1000"
+              />
+            </div>
+            <div
+              class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[100px] sm:min-h-[114px] xl:min-h-[141px]"
+            >
+              <div>
+                <h3 class="font-bold underline">5</h3>
+                <p>philadelphia, pomodororino, bresaola, scaglie di grana</p>
               </div>
             </div>
           </div>
