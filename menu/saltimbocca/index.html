@@ -10,6 +10,21 @@
       tailwind.config = tailwindConfig;
     </script>
   </head>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+  </style>
 
   <body>
     <header>
@@ -53,9 +68,9 @@
         </div>
       </nav>
 
-      <section class="font-bold">
+      <section class="font-bold bg-primary-50">
         <div
-          class="container mx-auto bg-primary-50 w-full flex justify-between items-center flex-wrap p-4"
+          class="container mx-auto w-full flex justify-between items-center flex-wrap p-4"
         >
           <div>
             <a
@@ -114,10 +129,12 @@
       </section>
     </header>
 
-    <main class="p-10">
+    <main class="p-4 sm:p-10">
       <!-- Secțiune submeniu -->
       <section class="container mx-auto py-10">
-        <h1 class="text-3xl font-bold text-center text-primary-50">
+        <h1
+          class="text-3xl font-bold text-center text-primary-700 animate-fadeInUp delay-1000 duration-1000"
+        >
           SALTIMBOCCA
         </h1>
       </section>
@@ -141,13 +158,13 @@
               class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[140px] sm:min-h-[154px] xl:min-h-[181px]"
             >
               <div>
-                <h3 class="font-bold text-[#f1c232]">SETTE</h3>
+                <h3 class="font-bold text-primary-700">SETTE</h3>
                 <p>wurstel, patatine, mozzarella</p>
               </div>
               <div>
                 <div class="flex justify-between gap-2">
-                  <p class="text-red-600 font-bold"></p>
-                  <p class="text-yellow-500 font-bold">€ 6, 00</p>
+                  <p></p>
+                  <p class="text-primary-700 font-bold">€ 6, 00</p>
                 </div>
               </div>
             </div>
@@ -167,13 +184,13 @@
               class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[140px] sm:min-h-[154px] xl:min-h-[181px]"
             >
               <div>
-                <h3 class="font-bold text-yellow-500">OTTO</h3>
+                <h3 class="font-bold text-primary-700">OTTO</h3>
                 <p>prosciutto cotto, mozzarella, patatine</p>
               </div>
               <div>
                 <div class="flex justify-between gap-2">
-                  <p class="text-red-600 font-bold"></p>
-                  <p class="text-yellow-500 font-bold">€ 6, 00</p>
+                  <p></p>
+                  <p class="text-primary-700 font-bold">€ 6, 00</p>
                 </div>
               </div>
             </div>
@@ -193,15 +210,15 @@
               class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[140px] sm:min-h-[154px] xl:min-h-[181px]"
             >
               <div>
-                <h3 class="font-bold text-yellow-500">NOVE</h3>
+                <h3 class="font-bold text-primary-700">NOVE</h3>
                 <p>
                   pomodorino, mozzarella, rucola, bresaola, scaglie di grana
                 </p>
               </div>
               <div>
                 <div class="flex justify-between gap-2">
-                  <p class="text-red-600 font-bold"></p>
-                  <p class="text-yellow-500 font-bold">€ 6, 00</p>
+                  <p></p>
+                  <p class="text-primary-700 font-bold">€ 6, 00</p>
                 </div>
               </div>
             </div>
@@ -221,7 +238,7 @@
               class="p-4 text-xl flex flex-col justify-between gap-2 min-h-[140px] sm:min-h-[154px] xl:min-h-[181px]"
             >
               <div>
-                <h3 class="font-bold text-yellow-500">DIECI</h3>
+                <h3 class="font-bold text-primary-700">DIECI</h3>
                 <p>
                   prosciutto cotto, mozzarella, crema di pistacchio, scaglie di
                   grana
@@ -229,8 +246,8 @@
               </div>
               <div>
                 <div class="flex justify-between gap-2">
-                  <p class="text-red-600 font-bold"></p>
-                  <p class="text-yellow-500 font-bold">€ 7, 00</p>
+                  <p></p>
+                  <p class="text-primary-700 font-bold">€ 7, 00</p>
                 </div>
               </div>
             </div>
